@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/swift-server/async-http-client.git",
         "state": {
           "branch": null,
-          "revision": "70826d038d5bdc3142a386b735792d87ef7a5dfc",
-          "version": "1.8.1"
+          "revision": "cbf533073d9a5edfb16c266d14151f69137ba7c9",
+          "version": "1.8.2"
         }
       },
       {
@@ -17,15 +17,6 @@
           "branch": null,
           "revision": "7457413e57dbfac762b32dd30c1caf2c55a02a3d",
           "version": "1.2.0"
-        }
-      },
-      {
-        "package": "AWSSDKSwiftCore",
-        "repositoryURL": "https://github.com/swift-aws/aws-sdk-swift-core.git",
-        "state": {
-          "branch": null,
-          "revision": "13738adc1603e4b50ae6aa3f758fc44f51e46aa3",
-          "version": "4.5.1"
         }
       },
       {
@@ -195,8 +186,8 @@
         "repositoryURL": "https://github.com/vapor/queues-redis-driver.git",
         "state": {
           "branch": null,
-          "revision": "04306b81ef25b3bc42d9634c7c657b3eb498ed0e",
-          "version": "1.0.0"
+          "revision": "2728477b50e24be82f5bc0bd0722c35656e1c5b1",
+          "version": "1.0.3"
         }
       },
       {
@@ -213,8 +204,8 @@
         "repositoryURL": "https://github.com/vapor/redis.git",
         "state": {
           "branch": null,
-          "revision": "00fdd687ec56468a3e21204ac0a9b6337d7e79ed",
-          "version": "4.0.0"
+          "revision": "f65588b64418fbd0516817deb5a00beedc1c3e98",
+          "version": "4.1.1"
         }
       },
       {
@@ -222,8 +213,8 @@
         "repositoryURL": "https://gitlab.com/mordil/RediStack.git",
         "state": {
           "branch": null,
-          "revision": "b2367ac33eb8632011c1ec7afff12307838a4dab",
-          "version": "1.1.0"
+          "revision": "16037bbb8248eccaf50b8499d3bb9ed945cfd44c",
+          "version": "1.2.1"
         }
       },
       {
@@ -240,8 +231,17 @@
         "repositoryURL": "https://github.com/soto-project/soto.git",
         "state": {
           "branch": null,
-          "revision": "803ab6a86a3c90e1405afb8fd6a131ec9b9ec64a",
-          "version": "4.6.0"
+          "revision": "b402b8a434ca39f24d189289ab93fbee96664502",
+          "version": "4.9.0"
+        }
+      },
+      {
+        "package": "AWSSDKSwiftCore",
+        "repositoryURL": "https://github.com/soto-project/soto-core.git",
+        "state": {
+          "branch": null,
+          "revision": "856a7df0c15763de4f9f3e3d7baea4a8aa009d22",
+          "version": "4.7.2"
         }
       },
       {
@@ -312,8 +312,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "37e7a33de45bac894c0b08b56a2f755ebe4884e6",
-          "version": "2.35.0"
+          "revision": "51c3fc2e4a0fcdf4a25089b288dd65b73df1b0ef",
+          "version": "2.37.0"
         }
       },
       {
@@ -348,8 +348,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-transport-services.git",
         "state": {
           "branch": null,
-          "revision": "e7f5278a26442dc46783ba7e063643d524e414a0",
-          "version": "1.11.3"
+          "revision": "8ab824b140d0ebcd87e9149266ddc353e3705a3e",
+          "version": "1.11.4"
         }
       },
       {
@@ -375,8 +375,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "34bf1b303623de04801d2b9bef5b2ed48b3e9319",
-          "version": "4.54.0"
+          "revision": "18e9419cae5049e43ca1e8002ca3cf0449f2c8ed",
+          "version": "4.55.0"
         }
       },
       {

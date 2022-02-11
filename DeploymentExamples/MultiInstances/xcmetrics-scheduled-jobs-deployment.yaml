@@ -52,7 +52,7 @@ spec:
         image: spotify/xcmetrics:latest
         command: ["./XCMetricsBackend",
                   "queues",
-                  "--scheduled"
+                  "--scheduled",
                   "--env",
                   "production"]
         env:
@@ -71,11 +71,11 @@ spec:
         - name: XCMETRICS_USE_GCS_REPOSITORY
           value: "1"
         - name: XCMETRICS_GOOGLE_PROJECT
-          value: "Replace with the name of your GCP project"
+          value: "gcp-xcmetrics"
         - name: GOOGLE_APPLICATION_CREDENTIALS
-          value: "/secrets/service_account.json"
+          value: "/home/jaronescoffery/gcp-xcmetrics-3d46b9cb883f.json"
         - name: XCMETRICS_GCS_BUCKET
-          value: "Replace with the name of your bucket"
+          value: "xcmetrics-test-bucket"
         - name: DB_HOST
           value: 127.0.0.1
         - name: DB_PORT

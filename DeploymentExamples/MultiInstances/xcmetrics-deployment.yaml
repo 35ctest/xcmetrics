@@ -23,7 +23,7 @@ spec:
       - name: cloud-sql-proxy
         image: gcr.io/cloudsql-docker/gce-proxy:1.17
         command: ["/cloud_sql_proxy",
-                  "-instances=Replace with your Cloud SQL connection string=tcp:5432",
+                  "-instances=gcp-xcmetrics:europe-west1:myinstance=tcp:5432",
                   "-credential_file=/secrets/service_account.json"]
         ports:
         - name: xcmetricsdb
@@ -53,7 +53,7 @@ spec:
         - name: XCMETRICS_START_JOBS_SAME_INSTANCE
           value: "0" # Jobs will be run in other process
         - name: XCMETRICS_USE_ASYNC_LOG_PROCESSING
-          value: "1"
+          value: "0"
         - name: XCMETRICS_REDACT_USER_DATA
           value: "1"
         - name: REDIS_HOST
@@ -64,23 +64,11 @@ spec:
         - name: XCMETRICS_USE_GCS_REPOSITORY
           value: "1"
         - name: XCMETRICS_GOOGLE_PROJECT
-          value: "Replace with the name of your GCP project"
+          value: "gcp-xcmetrics"
         - name: GOOGLE_APPLICATION_CREDENTIALS
-          value: "/secrets/service_account.json"
+          value: "/home/jaronescoffery/gcp-xcmetrics-3d46b9cb883f.json"
         - name: XCMETRICS_GCS_BUCKET
-          value: "Replace with the name of your bucket"
-        ## Amazon S3 Configuration
-        # Use these variables if you prefer to use Amazon S3 to store the logs
-        #- name: XCMETRICS_USE_S3_REPOSITORY
-        #  value: "1"
-        #- name: AWS_ACCESS_KEY_ID
-        #  value: "Replace with your access Key id"
-        #- name: AWS_SECRET_ACCESS_KEY
-        #  value: "Replace with your access Secret Key id"
-        #- name: XCMETRICS_S3_BUCKET
-        #  value: "Replace with the name of your bucket"
-        #- name: XCMETRICS_S3_REGION
-        #  value: "Replace with the name of your bucket's region"
+          value: "xcmetrics-test-bucket"
         - name: DB_HOST
           value: 127.0.0.1
         - name: DB_PORT

@@ -23,7 +23,7 @@ spec:
       - name: cloud-sql-proxy
         image: gcr.io/cloudsql-docker/gce-proxy:1.17
         command: ["/cloud_sql_proxy",
-                  "-instances=Replace with your Cloud SQL connection string=tcp:5432",
+                  "-instances=gcp-xcmetrics:europe-west1:myinstance=tcp:5432",
                   "-credential_file=/secrets/service_account.json"]
         ports:
         - name: xcmetricsdb

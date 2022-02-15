@@ -5,7 +5,7 @@ FROM swift:5.3-bionic as build
 WORKDIR /build
 
 # Install libraries needed
-RUN apt-get -qq update && apt-get install -y \
+RUN sudo apt-get -qq update && sudo apt-get install -y \
   libssl-dev zlib1g-dev
 
 # First just resolve dependencies.

@@ -20,6 +20,7 @@
 import Foundation
 import Vapor
 import NIO
+import AppConfig
 
 class Configuration {
 
@@ -50,11 +51,14 @@ class Configuration {
 
     /// Connect to CloudSQL using Sockets. This is the preferred way to connect to it when running in CloudSQL
     lazy var useCloudSQLSocket: Bool = {
-        return (Environment.get("XCMETRICS_USE_CLOUDSQL_SOCKET") ?? "0") == "1"
+        return (Environment.get("XCMETRICS_USE_CLOUDSQL_SOCKET") ?? "1"
     }()
 
     lazy var cloudSQLConnectionName: String? = {
-        return Environment.get("XCMETRICS_CLOUDSQL_CONNECTION_NAME")
+        return
+          Environment.get("XCMETRICS_CLOUDSQL_CONNECTION_NAME") ??
+          "practice-cloud-run-344512:us-central1:myinstance"
+//          OR return Environment.get("practice-cloud-run-344512:us-central1:myinstance")
     }()
 
     lazy var databaseHost: String = {
@@ -66,15 +70,15 @@ class Configuration {
     }()
 
     lazy var databaseName: String = {
-        return Environment.get("DB_NAME") ?? "xcmetrics-dev"
+        return Environment.get("DB_NAME") ?? "xcmetrics"
     }()
 
     lazy var databaseUser: String = {
-        return Environment.get("DB_USER") ?? "xcmetrics-dev"
+        return Environment.get("DB_USER") ?? "xcmetrics"
     }()
 
     lazy var databasePassword: String = {
-        return Environment.get("DB_PASSWORD") ?? "xcmetrics-dev"
+        return Environment.get("DB_PASSWORD") ?? "mypassword"
     }()
 
     lazy var redisHost: String = {

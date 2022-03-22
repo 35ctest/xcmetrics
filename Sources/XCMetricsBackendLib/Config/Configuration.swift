@@ -20,7 +20,6 @@
 import Foundation
 import Vapor
 import NIO
-import AppConfig
 
 class Configuration {
 

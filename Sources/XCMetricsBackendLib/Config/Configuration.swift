@@ -50,7 +50,7 @@ class Configuration {
 
     /// Connect to CloudSQL using Sockets. This is the preferred way to connect to it when running in CloudSQL
     lazy var useCloudSQLSocket: Bool = {
-        return (Environment.get("XCMETRICS_USE_CLOUDSQL_SOCKET") ?? "1"
+        return (Environment.get("XCMETRICS_USE_CLOUDSQL_SOCKET") ?? "1") == "1"
     }()
 
     lazy var cloudSQLConnectionName: String? = {
